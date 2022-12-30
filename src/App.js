@@ -23,14 +23,16 @@ function App(){
 
   return (
     <div className="App">
+      <h1>OpenApi Chat App</h1>
       <form onSubmit={handleSubmit}>
         <textarea
           value={message}
+          placeholder="Ask Away"
           onChange={(e) => setMessage(e.target.value)}
         ></textarea>
         <button type="submit">Submit</button>
       </form>
-    <div>{response}</div>
+    {response && <div><b>ChatBot:</b>{response}</div>}
     </div>
   );
 
