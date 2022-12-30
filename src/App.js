@@ -15,7 +15,7 @@ function App(){
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({message}),
+      body: JSON.stringify({ message }),
     })
     .then((res) => res.json())
     .then((data) => setResponse(data.message));
